@@ -11,7 +11,7 @@ public class Regex {
 
     public static boolean passwordValidation(String password){
 
-        String regex = "^(?=.*\\d)(?=.*[a-zA-Z])\\S{8,16}$";;
+        String regex = "^(?=.*\\d)(?=.*[a-zA-Z])\\S{8,16}$";
 
         return password.matches(regex);
     }
