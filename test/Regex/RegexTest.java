@@ -4,6 +4,7 @@ import org.junit.jupiter.api.Test;
 
 import javax.annotation.processing.SupportedAnnotationTypes;
 
+import static org.junit.jupiter.api.Assertions.assertFalse;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
 public class RegexTest {
@@ -27,5 +28,13 @@ public class RegexTest {
         boolean actual = Regex.passwordValidation(password);
 
         assertTrue(actual);
+    }
+
+    @Test
+    public void testThatPasswordWithSpacewillFail(){
+
+        String password = "Java Code@1";
+        boolean actual = Regex.passwordValidation(password);
+        assertFalse(actual);
     }
 }
