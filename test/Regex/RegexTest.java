@@ -37,4 +37,12 @@ public class RegexTest {
         boolean actual = Regex.passwordValidation(password);
         assertFalse(actual);
     }
+
+    @Test
+    public void testThatPasswordWithSpacewillFail2(){
+
+        String password = "Welcome 123$";
+        boolean actual = Regex.passwordValidation(password);
+        assertFalse(actual);
+    }
 }
