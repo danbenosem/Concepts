@@ -10,4 +10,6 @@ public class BiPredicateImpl {
 
         System.out.println(checker.test("Hello",10));
     }
+
+
 }
